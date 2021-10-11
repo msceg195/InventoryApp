@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Material Issue Voucher"
+             x:Class="DroidInventory_MSC.frmMaterialIssueVouchers">
+    <TableView  HasUnevenRows="True" >
+        <TableRoot   >
+            <TableSection >
+                <ViewCell >
+                    <StackLayout Orientation="Horizontal" Padding="5">
+                        <Label Text="Store" Style="{d:StaticResource LblTitles}"  />
+                        <Label x:Name="lblStoreName" Text="" Style="{d:StaticResource LblData}"  />
+                        <Button x:Name="btnStore"  Clicked="btnStore_Clicked"   ImageSource="Wview.png" />
+                    </StackLayout>
+                </ViewCell>
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal"  Padding="5">
+                        <Label Text="Item" Style="{d:StaticResource LblTitles}"   />
+                        <Label x:Name="lblItemName" Text="" Style="{d:StaticResource LblData}" />
+                        <Button x:Name="btnScan"   Clicked="btnScan_Clicked"   ImageSource="Wcamera.png" ></Button>
+                    </StackLayout>
+                </ViewCell>
+
+               
+                <ViewCell>
+                    <StackLayout  HorizontalOptions="CenterAndExpand">
+                        <Button x:Name="btnAddtoList" Clicked="btnAddtoList_Clicked"  Text="Save" HorizontalOptions="Center"  WidthRequest="100"  ImageSource="Wsave.png"   ></Button>
+                    </StackLayout>
+                </ViewCell>
+
+            </TableSection>
+
+        </TableRoot>
+    </TableView>
+</ContentPage>

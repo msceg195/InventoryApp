@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" Padding="20" Title="Select Store..."
+             x:Class="DroidInventory_MSC.StorePage">
+    <ListView x:Name="listStores" HasUnevenRows="True" SeparatorVisibility="Default" SeparatorColor="#fecb02"  >
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding StoreName}" TextColor="Black"  />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

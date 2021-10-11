@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Store Transfer Voucher"
+             x:Class="DroidInventory_MSC.frmStoreTransferVouchers">
+    <TableView  HasUnevenRows="True" >
+        <TableRoot   >
+            <TableSection >
+
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="5">
+                        <Label Text="Requesition" Style="{d:StaticResource LblTitles}" />
+                        <Label x:Name="lblIssueRequesitionName" Text="" Style="{d:StaticResource LblData}"   />
+                        <Button x:Name="btnIssueRequesition"  Clicked="btnIssueRequesition_Clicked"  ImageSource="Wview.png"  />
+                    </StackLayout>
+                </ViewCell>
+                
+                
+                
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="5">
+                        <Label Text="From Store" Style="{d:StaticResource LblTitles}" />
+                        <Label x:Name="lblFromStoreName" Text="" Style="{d:StaticResource LblData}"   />
+                        <Button x:Name="btnFromStore"  Clicked="btnFromStore_Clicked"  ImageSource="Wview.png"  />
+                    </StackLayout>
+                </ViewCell>
+
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal" Padding="5">
+                        <Label Text="To Store" Style="{d:StaticResource LblTitles}"/>
+                        <Label x:Name="lblToStoreName" Text="" Style="{d:StaticResource LblData}"/>
+                        <Button x:Name="btnToStore"  Clicked="btnToStore_Clicked"  ImageSource="Wview.png"  />
+                    </StackLayout>
+                </ViewCell>
+
+                <ViewCell>
+                    <StackLayout Orientation="Horizontal"  Padding="5">
+                        <Label Text="Item" Style="{d:StaticResource LblTitles}"/>
+                        <Label x:Name="lblItemName" Text="" Style="{d:StaticResource LblData}"   />
+                        <Button x:Name="btnScan"    ImageSource="Wcamera.png"  Clicked="btnScan_Clicked"></Button>
+                    </StackLayout>
+                </ViewCell>
+
+                <ViewCell>
+                    <StackLayout>
+                        <Button x:Name="btnAddtoList" Clicked="btnAddtoList_Clicked"  Text="Add" HorizontalOptions="Center"  WidthRequest="100"  ImageSource="Wadd.png" ></Button>
+                    </StackLayout>
+                </ViewCell>
+
+            </TableSection>
+            <TableSection Title="Details" x:Name="ListTab1" TextColor="Black" >
+
+                <ViewCell>
+                    <StackLayout>
+                        <ScrollView VerticalScrollBarVisibility="Always">
+                            <ListView x:Name="listv1" SeparatorVisibility="Default" HasUnevenRows="True" HeightRequest="275"   VerticalScrollBarVisibility="Always"   >
+                                <ListView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ViewCell>
+                                            <StackLayout Orientation="Horizontal" Spacing="50">
+                                                <Label Text="{Binding ItemName}"/>
+                                            </StackLayout>
+                                            <ViewCell.ContextActions>
+                                                <MenuItem Text="Delete" Clicked="MenuItem_Clicked" IsDestructive="True" CommandParameter="{Binding .}"/>
+                                            </ViewCell.ContextActions>
+
+                                        </ViewCell>
+
+                                    </DataTemplate>
+                                </ListView.ItemTemplate>
+                            </ListView>
+                        </ScrollView>
+                    </StackLayout>
+                </ViewCell>
+
+
+                <ViewCell>
+                    <StackLayout HorizontalOptions="CenterAndExpand">
+                        <Button x:Name="btnAddtoDB" Clicked="btnAddtoDB_Clicked"  Text="Save" HorizontalOptions="Center"  WidthRequest="100" ImageSource="Wsave.png"  ></Button>
+                    </StackLayout>
+                </ViewCell>
+
+            </TableSection>
+        </TableRoot>
+    </TableView>
+</ContentPage>

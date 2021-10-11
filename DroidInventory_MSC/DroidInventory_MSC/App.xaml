@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="DroidInventory_MSC.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <Style  TargetType="Button" >
+                <Setter Property="BackgroundColor" Value="#707070" /> 
+                <Setter Property="BorderRadius" Value="10" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="WidthRequest" Value="55" />
+                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="End" />
+
+            </Style>
+            <Style x:Key="LblTitles"  TargetType="Label" >
+                <Setter Property="TextColor" Value="#707070" />
+                <Setter Property="FontSize" Value="Subtitle" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="Padding" Value="10,0,0,0" />
+                <Setter Property="FontAttributes" Value="Bold" /> 
+            </Style>
+
+            <Style x:Key="LblData"  TargetType="Label" >
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
+                <Setter Property="WidthRequest" Value="200" />
+                <Setter Property="HorizontalTextAlignment" Value="Start" />
+               
+            </Style>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

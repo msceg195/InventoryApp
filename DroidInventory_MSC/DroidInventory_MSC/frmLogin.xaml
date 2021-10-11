@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             BackgroundColor="#fecb02"
+             mc:Ignorable="d"
+             NavigationPage.HasNavigationBar="False"
+             x:Class="DroidInventory_MSC.frmLogin">
+
+    <StackLayout Orientation="Vertical" HorizontalOptions="Center" >
+
+        <StackLayout Padding="0,100,0,75">
+            <Image Source="logo.png"  HeightRequest="150" WidthRequest="150" />
+            <Label Text="my Inventory" HorizontalTextAlignment="Center" FontSize="20" />
+        </StackLayout>
+
+        <StackLayout HorizontalOptions="Center" Spacing="5" Orientation="Horizontal">
+            <Image Source="ic_person.png" />
+            <Entry x:Name="txtUserName" MaxLength="50" Placeholder="Username"  WidthRequest="200" BackgroundColor="#fecb02" />
+        </StackLayout>
+        
+        <StackLayout HorizontalOptions="Center" Spacing="5" Orientation="Horizontal">
+            <Image Source="ic_lock.png" />
+            <Entry x:Name="txtPWD"      MaxLength="50" Placeholder="Password"  IsPassword="True" WidthRequest="200"  BackgroundColor="#fecb02"/>
+        </StackLayout>
+        <StackLayout HorizontalOptions="CenterAndExpand" Spacing="5" Orientation="Horizontal">
+            <CheckBox x:Name="chkRMe" Color="Black" VerticalOptions="Center"  />
+            <Label  Text="Remember Me" VerticalOptions="Center"  TextColor="Black"  />
+        </StackLayout>
+        <StackLayout Padding="60">
+            
+            <Button x:Name="btnLogin" Text="LOGIN" Clicked="btnLogin_Clicked" VerticalOptions="Center" HorizontalOptions="Center"  BackgroundColor="Black" BorderRadius="25" TextColor="Yellow" FontAttributes="Bold" WidthRequest="185" HeightRequest="55" />
+            <Label x:Name="lblMSG" Text="" HorizontalTextAlignment="Center" FontSize="15" TextColor="Red" />
+        </StackLayout>
+        
+    </StackLayout>
+</ContentPage>
