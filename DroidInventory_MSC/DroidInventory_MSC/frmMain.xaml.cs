@@ -18,6 +18,8 @@ namespace DroidInventory_MSC
             
 
             InitializeComponent();
+
+            //any way
             
             if ((Application.Current as App).IsGoodReceipt != "0")
             {
@@ -27,6 +29,7 @@ namespace DroidInventory_MSC
                     Icon = "plus.png",
                     IsTabStop = true,
                     Content = new frmGoodReceiptNotes()
+
                 };
                 FItems1.Items.Add(SC_GoodReceiptNotes);
             }
